@@ -1,0 +1,34 @@
+<app-menu></app-menu>
+<div id="banner1">
+    <span style="font-weight: bold;">Products</span> |
+    <a routerLink="/product/create" id="a-link">Create New Product</a>
+</div>
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>PartNbr</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Unit</th>
+            <th>PhotoPath</th>
+            <th>Vendor</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{ p.id }}</td>
+            <td>{{ p.partNbr }}</td>
+            <td>{{ p.name }}</td>
+            <td>{{ p.price | currency }}</td>
+            <td>{{ p.unit }}</td>
+            <td>{{ p.photoPath }}</td>
+            <td>{{ p.vendor }}</td>
+            <td>
+                <a routerLink="/product/detail/{{ p.id }}">Detail</a> |
+                <a routerLink="/product/edit/{{ p.id }}">Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

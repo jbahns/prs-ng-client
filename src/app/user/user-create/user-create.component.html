@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+<div id="banner1">
+    <span style="font-weight: bold;">User Create</span>
+</div>
+<table class="table table-sm table-striped" style="margin-bottom: 0px;">
+    <tbody>
+
+        <tr>
+            <th>Id:</th>
+            <td><input [(ngModel)]="user.id" type="number" disabled></td>
+        </tr>
+        <tr>
+            <th>Username:</th>
+            <td><input [(ngModel)]="user.username" type="text" ></td>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <td><input [(ngModel)]="user.password" type="text" ></td>
+        </tr>
+        <tr>
+            <th>FirstName:</th>
+            <td><input [(ngModel)]="user.firstname" type="text" ></td>
+        </tr>
+        <tr>
+            <th>LastName:</th>
+            <td><input [(ngModel)]="user.lastname" type="text" ></td>
+        </tr>
+        <tr>
+            <th>Phone:</th>
+            <td><input [(ngModel)]="user.phone" type="text" char="13" ></td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td><input [(ngModel)]="user.email" type="text" ></td>
+        </tr>
+        <tr>
+            <th>IsAdmin:</th>
+            <td><input [(ngModel)]="user.isAdmin" type="checkbox" ></td>
+        </tr>
+        <tr>
+            <th>IsReviewer:</th>
+            <td><input [(ngModel)]="user.isReviewer" type="checkbox" ></td>
+        </tr>
+    </tbody>
+</table>
+<div id="banner1" style="padding-top: 20px;">
+    <button (click)="save()" style="margin-left: 20px; margin-bottom: 50px;" class="btn btn-secondary">Save</button>
+</div>
